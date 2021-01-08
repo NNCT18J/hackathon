@@ -1,0 +1,128 @@
+\documentclass[a4j]{jarticle}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{mediabb}
+\makeatletter
+%https://qiita.com/ta_b0_/items/2619d5927492edbb5b03
+\usepackage{listings,jlisting} %日本語のコメントアウトをする場合jlstlistingが必要
+\usepackage[top=25truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
+%ここからソースコードの表示に関する設定
+\lstset{
+    basicstyle={\ttfamily},
+    identifierstyle={\small},
+    commentstyle={\smallitshape},
+    keywordstyle={\small\bfseries},
+    ndkeywordstyle={\small},
+    stringstyle={\small\ttfamily},
+    frame={tb},
+    breaklines=true,
+    columns=[l]{fullflexible},
+    numbers=left,
+    xrightmargin=0zw,
+    xleftmargin=3zw,
+    numberstyle={\scriptsize},
+    stepnumber=1,
+    numbersep=1zw,
+    lineskip=-0.5ex
+}
+%ここまでソースコードの表示に関する設定
+
+\if0
+---------------------------------こめこめこめこめこめこめこめこめこめこめこめ
+\renewcommand{\thefigure}{\arabic{figure}}
+\@addtoreset{figure}{section}
+\makeatother
+\makeatletter
+\renewcommand{\thetable}{\arabic{table}}
+\@addtoreset{table}{section}
+\makeatother
+\makeatletter
+\renewcommand{\theequation}{\arabic{equation}}
+\@addtoreset{equation}{section}
+\makeatother
+---------------------------------こめこめこめこめこめこめこめこめこめこめこめ
+\fi
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{ascmac}
+\usepackage{fancyvrb}
+\usepackage{otf}
+\usepackage{here}
+\title{長野高専3Jハッカソン 2021-04 開催のお知らせ}
+\author{Bony\_Chops}
+\newcommand{\todayAD}{\number\year 年\number\month 月\number\day 日}\date{\todayAD}
+\begin{document}
+\maketitle
+
+\section{目的}
+今回行うハッカソンは以下を目的とする．
+\begin{itemize}
+\item 3Jのみんなが人前でプロジェクトを発表する経験を培うため
+\item 課題ではなく自由な開発を行うことにより，自身の将来像を見つけるため(なにに向いているかなど)
+\item お互いがどのようなことに興味があるかを認識するため
+\end{itemize}
+\section{対象者}
+参加したい\textbf{現3J}\footnote{このテキストをもらったタイミングで長野高専の3Jが対象です．\textbf{仮に留年しても}参加してOKにします．}\footnote{本当は飛び入りで「長野高専ならどの学年でもOK!」にしようとしましたが，僕が知る限り\textbf{4Jにも2Jにも化物級のつよつよがいる}ため，心を折りかねたいため3J限定としました．こればっかりは許して．}のみんな
+
+\section{主な流れ}
+参加者は期限までに\textbf{作品を作る or 何かを研究する/勉強する} ことにより得られた知見や成果物を，スライドを主に用いて発表してもらいます．その際に\textbf{使った言語・成果物の内容の制限は設けません．未完成でもOKです．}小学校のときにやった自由研究の高専バージョンだとお考えください．\\
+\quad 発表の際，従来のように\textbf{優秀賞などは決定しません}\footnote{厳密に言うと，ハッカソンと言うよりLT会ですね．}．クオリティにこだわらず，自由に作りましょう．発表は4月の頭頃を予定としています．
+
+\section{扱うテーマ例}
+こんなものがあげられます\footnote{基本的にはプログラミングや，授業で扱ったことを発表することが望ましいですが，例にあるように基本的にどんな内容でもOKです．}．自分の好きなことを発表してみましょう．
+\begin{itemize}
+    \item 課題で出しきれなかったフェルマー数$F7$リベンジしてみた
+    \item C言語で書かれたプログラムはプログラムではない！Javaに書き換えます！
+    \item Scratchで円周率1000桁計算してみた
+    \item ラズパイを使ったスマートDorm(寮)計画
+    \item \LaTeX で実装するクイックソート
+    \item 生でHTMLを書く時代は終わりを告げた\dots 時代は\textdagger \textit{\textbf{JSX}} \textdagger
+    \item 色違いボルケニオンの手に入れる方法
+\end{itemize}
+
+\section{注意事項}
+本ハッカソンに参加するにあたって，以下の注意事項を留意してください．
+\begin{itemize}
+    \item 一人$n$個までOK．制限なし．
+    \item ハッカソンで作成したプロジェクトは\textbf{基本的に公開されます}．非公開を望む場合は事前にお知らせください．
+    \item 内容は特に制限しませんが，発表資料はみんながわかりやすいものにしましょう．みんなが知らなそうな単語を並べ立てても面白い資料にはなりません(ちゃんと説明して！)．
+    \item 内容は特に制限しませんが，基本的に他人が見て不快になるような内容は発表をお断りさせていただくことがあります．
+    \item 僕が内容を事前に確認します．よろしくおねがいします．
+    \item 発表の際にはスライドを作成してもらいますが，その際に載せる名前は\textbf{公開しても良いハンドルネーム}にしてください．(名前がなければそのまま公開するか，非公開にとどめておくことができます)
+    \item 今回のハッカソンでは，他人の成果物を評価しません\footnote{何かを作り，発表する経験を得ることが大事であり，作品の優劣をつけ，過半数が悲しむようではきっかけづくりとして役目を果たせていないため．それと，そもそも全員違うテーマで出展してくることを想定しているため．}．発表後に質疑応答の時間を設けますが，基本的にはプラスの意見が多いといいな．
+\end{itemize}
+
+\section{日程}
+
+\begin{table}[H]
+    \center
+    \begin{tabular}{c|c} \hline
+        日付 & 内容 \\ \hline
+        01/08 14:20 & ハッカソン開始 \\
+        \textbf{03/31 23:59} & \textbf{作品提出最終締切}\footnotemark \\
+        04/xx xx:xx & 特活で発表したい\footnotemark \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{まとめ}
+\begin{table}[H]
+    \center
+    \begin{tabular}{c|c} \hline
+        対象者 & 現3J \\
+        使用する言語 & なんでも良い \\
+        発表する内容 & なんでも良い \\
+        期日 & \textbf{03/31 23:59}  \\
+        発表時間 & 5〜10分?/1プロジェクト  \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{その他}
+詳細は後日連絡します！！！！！
+
+\footnotetext[6]{未完成でもOKです．発表資料を先に作っておいたほうがいいかも}
+\footnotetext[7]{作品数によっては複数の特活に分かれるかもしれません}
+
+\end{document}
